@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "heroku-prebuild": "npm install --only=dev",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
+    "cors": "^2.8.5",
     "jsonschema": "^1.4.0",
     "uuid": "^8.3.2"
   }
