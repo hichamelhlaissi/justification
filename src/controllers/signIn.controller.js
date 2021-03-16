@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
-//const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require('uuid');
+
 const moment = require('moment');
 const fs = require('fs');
 const jwtKey = "myKey";
@@ -8,7 +9,7 @@ let users = require('../../public/users')
 
 module.exports.signIn_post=(req,res,next)=>{
     const {email} = req.body;
-    const uid = "uuidv4()";
+    const uid = uuidv4();
     const timestamp = moment().valueOf();
     const ret = {
         user_id:uid,
