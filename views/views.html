@@ -1,0 +1,32 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div class="container">
+    <div class="row">
+    <div class="mb-3" id="signin">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <button type="button" class="btn btn-primary" onclick="signIn()">Primary</button>
+    </div>
+        <div class="mb-3" id="text">
+            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+    </div>
+</div>
+<div id="ret">
+</div>
+<script>
+    $("#text").hide();
+    function signIn(callback)
+    {
+        const xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
+                callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", 'https://justification.herokuapp.com/api/signIn', true); // true for asynchronous
+        xmlHttp.send(null);
+    }
+
+</script>
