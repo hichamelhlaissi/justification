@@ -32,15 +32,17 @@
         //         alert(e);
         //     }
         // });
-        console.log('dkhlt')
-        const xmlHttp = new XMLHttpRequest();
-        xmlHttp.onreadystatechange = function() {
-            if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
-                callback(xmlHttp.responseText);
-            console.log(xmlHttp.responseText)
-        }
-        xmlHttp.open("GET", 'http://localhost:3000/api/signin', true); // true for asynchronous
-        xmlHttp.send(null);
+         console.log('dkhlt')
+        $.get( "http://localhost:3000/api/signin" );
+
+        // const xmlHttp = new XMLHttpRequest();
+        // xmlHttp.onreadystatechange = function() {
+        //     if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
+        //         callback(xmlHttp.responseText);
+        //     console.log(xmlHttp.responseText)
+        // }
+        // xmlHttp.open("GET", 'http://localhost:3000/api/signin', true); // true for asynchronous
+        // xmlHttp.send(null);
     }
 
 </script>
