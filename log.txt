@@ -62,3 +62,36 @@
 2021-03-16T04:35:11.685260+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=justification.herokuapp.com request_id=1fee43e6-758e-4ea6-9f3e-0b98f7e07690 fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
 2021-03-16T04:35:19.845430+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/test" host=justification.herokuapp.com request_id=db806659-56b2-447f-9cbf-06bed48a3886 fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
 2021-03-16T04:35:20.224529+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=justification.herokuapp.com request_id=950aea0c-3656-4340-8668-977a190c61ab fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
+2021-03-16T04:40:10.000000+00:00 app[api]: Build started by user elhlaissihicham@gmail.com
+2021-03-16T04:40:31.392732+00:00 heroku[web.1]: State changed from crashed to starting
+2021-03-16T04:40:31.146948+00:00 app[api]: Release v4 created by user elhlaissihicham@gmail.com
+2021-03-16T04:40:31.146948+00:00 app[api]: Deploy cb9e83c7 by user elhlaissihicham@gmail.com
+2021-03-16T04:40:32.000000+00:00 app[api]: Build succeeded
+2021-03-16T04:40:36.068277+00:00 heroku[web.1]: Starting process with command `node ./bin/www`
+2021-03-16T04:40:39.789822+00:00 heroku[web.1]: Process exited with status 1
+2021-03-16T04:40:39.862761+00:00 heroku[web.1]: State changed from starting to crashed
+2021-03-16T04:40:39.700324+00:00 app[web.1]: internal/modules/cjs/loader.js:883
+2021-03-16T04:40:39.700343+00:00 app[web.1]: throw err;
+2021-03-16T04:40:39.700344+00:00 app[web.1]: ^
+2021-03-16T04:40:39.700344+00:00 app[web.1]: 
+2021-03-16T04:40:39.700344+00:00 app[web.1]: Error: Cannot find module 'express-rate-limit'
+2021-03-16T04:40:39.700345+00:00 app[web.1]: Require stack:
+2021-03-16T04:40:39.700345+00:00 app[web.1]: - /app/app.js
+2021-03-16T04:40:39.700345+00:00 app[web.1]: - /app/bin/www
+2021-03-16T04:40:39.700346+00:00 app[web.1]: at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)
+2021-03-16T04:40:39.700346+00:00 app[web.1]: at Function.Module._load (internal/modules/cjs/loader.js:725:27)
+2021-03-16T04:40:39.700347+00:00 app[web.1]: at Module.require (internal/modules/cjs/loader.js:952:19)
+2021-03-16T04:40:39.700347+00:00 app[web.1]: at require (internal/modules/cjs/helpers.js:88:18)
+2021-03-16T04:40:39.700347+00:00 app[web.1]: at Object.<anonymous> (/app/app.js:6:19)
+2021-03-16T04:40:39.700348+00:00 app[web.1]: at Module._compile (internal/modules/cjs/loader.js:1063:30)
+2021-03-16T04:40:39.700348+00:00 app[web.1]: at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+2021-03-16T04:40:39.700348+00:00 app[web.1]: at Module.load (internal/modules/cjs/loader.js:928:32)
+2021-03-16T04:40:39.700348+00:00 app[web.1]: at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+2021-03-16T04:40:39.700349+00:00 app[web.1]: at Module.require (internal/modules/cjs/loader.js:952:19) {
+2021-03-16T04:40:39.700349+00:00 app[web.1]: code: 'MODULE_NOT_FOUND',
+2021-03-16T04:40:39.700350+00:00 app[web.1]: requireStack: [ '/app/app.js', '/app/bin/www' ]
+2021-03-16T04:40:39.700350+00:00 app[web.1]: }
+2021-03-16T04:40:44.937546+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=justification.herokuapp.com request_id=246c75b8-50be-4ca1-923a-be7f65f4691e fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
+2021-03-16T04:40:45.298249+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=justification.herokuapp.com request_id=978019d2-892e-4302-b84c-058161c47511 fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
+2021-03-16T04:40:52.300392+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/test" host=justification.herokuapp.com request_id=e54b77fc-9146-48af-b4e2-cbdf18f17d88 fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
+2021-03-16T04:40:52.621800+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=justification.herokuapp.com request_id=6095c8e2-594c-46bb-ade3-e3f3231dff9b fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https

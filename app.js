@@ -3,7 +3,6 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const rateLimit = require("express-rate-limit");
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -21,24 +20,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-const apiLimiter = rateLimit({
-  windowMs: 100000000, // 15 minutes
-  max: 1,
-  message: "Too many accounts created from this IP, please try again after an hour"
-});
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/api/gettext", textCheckRouter,);
 app.use('/api/signin', signInRouter);
 
-app.use('/api/test',apiLimiter, (req, res) => {
-  const moment = require('moment');
-  let date = 1615864760336;
-  let anotherDate = moment().valueOf();
-  console.log(moment().subtract(24, 'hours').isAfter(date));
-  console.log(moment().subtract(24, 'hours').isAfter(anotherDate));
-  res.end()
-})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
