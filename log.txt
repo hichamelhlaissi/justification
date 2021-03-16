@@ -1,0 +1,64 @@
+2021-03-16T04:33:19.741457+00:00 app[api]: Initial release by user elhlaissihicham@gmail.com
+2021-03-16T04:33:19.741457+00:00 app[api]: Release v1 created by user elhlaissihicham@gmail.com
+2021-03-16T04:33:20.356892+00:00 app[api]: Enable Logplex by user elhlaissihicham@gmail.com
+2021-03-16T04:33:20.356892+00:00 app[api]: Release v2 created by user elhlaissihicham@gmail.com
+2021-03-16T04:33:39.139056+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/" host=justification.herokuapp.com request_id=f2c21bee-d3ec-468b-bc03-2ce8f0e71ec2 fwd="176.129.116.94" dyno= connect= service= status=502 bytes= protocol=https
+2021-03-16T04:33:39.444989+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/favicon.ico" host=justification.herokuapp.com request_id=d841d399-0e3c-451b-9047-5aff1c3f196f fwd="176.129.116.94" dyno= connect= service= status=502 bytes= protocol=https
+2021-03-16T04:34:25.000000+00:00 app[api]: Build started by user elhlaissihicham@gmail.com
+2021-03-16T04:34:45.840333+00:00 app[api]: Release v3 created by user elhlaissihicham@gmail.com
+2021-03-16T04:34:45.840333+00:00 app[api]: Deploy 29e72529 by user elhlaissihicham@gmail.com
+2021-03-16T04:34:45.858135+00:00 app[api]: Scaled to web@1:Free by user elhlaissihicham@gmail.com
+2021-03-16T04:34:47.000000+00:00 app[api]: Build succeeded
+2021-03-16T04:34:49.896262+00:00 heroku[web.1]: Starting process with command `node app.js`
+2021-03-16T04:34:53.281157+00:00 app[web.1]: internal/modules/cjs/loader.js:883
+2021-03-16T04:34:53.281179+00:00 app[web.1]: throw err;
+2021-03-16T04:34:53.281179+00:00 app[web.1]: ^
+2021-03-16T04:34:53.281179+00:00 app[web.1]: 
+2021-03-16T04:34:53.281180+00:00 app[web.1]: Error: Cannot find module 'express-rate-limit'
+2021-03-16T04:34:53.281180+00:00 app[web.1]: Require stack:
+2021-03-16T04:34:53.281180+00:00 app[web.1]: - /app/app.js
+2021-03-16T04:34:53.281181+00:00 app[web.1]: at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)
+2021-03-16T04:34:53.281181+00:00 app[web.1]: at Function.Module._load (internal/modules/cjs/loader.js:725:27)
+2021-03-16T04:34:53.281182+00:00 app[web.1]: at Module.require (internal/modules/cjs/loader.js:952:19)
+2021-03-16T04:34:53.281182+00:00 app[web.1]: at require (internal/modules/cjs/helpers.js:88:18)
+2021-03-16T04:34:53.281182+00:00 app[web.1]: at Object.<anonymous> (/app/app.js:6:19)
+2021-03-16T04:34:53.281183+00:00 app[web.1]: at Module._compile (internal/modules/cjs/loader.js:1063:30)
+2021-03-16T04:34:53.281183+00:00 app[web.1]: at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+2021-03-16T04:34:53.281184+00:00 app[web.1]: at Module.load (internal/modules/cjs/loader.js:928:32)
+2021-03-16T04:34:53.281184+00:00 app[web.1]: at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+2021-03-16T04:34:53.281184+00:00 app[web.1]: at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12) {
+2021-03-16T04:34:53.281185+00:00 app[web.1]: code: 'MODULE_NOT_FOUND',
+2021-03-16T04:34:53.281185+00:00 app[web.1]: requireStack: [ '/app/app.js' ]
+2021-03-16T04:34:53.281185+00:00 app[web.1]: }
+2021-03-16T04:34:53.378423+00:00 heroku[web.1]: Process exited with status 1
+2021-03-16T04:34:53.464742+00:00 heroku[web.1]: State changed from starting to crashed
+2021-03-16T04:34:53.472305+00:00 heroku[web.1]: State changed from crashed to starting
+2021-03-16T04:34:57.404410+00:00 heroku[web.1]: Starting process with command `node app.js`
+2021-03-16T04:34:59.839185+00:00 app[web.1]: internal/modules/cjs/loader.js:883
+2021-03-16T04:34:59.839200+00:00 app[web.1]: throw err;
+2021-03-16T04:34:59.839200+00:00 app[web.1]: ^
+2021-03-16T04:34:59.839201+00:00 app[web.1]: 
+2021-03-16T04:34:59.839201+00:00 app[web.1]: Error: Cannot find module 'express-rate-limit'
+2021-03-16T04:34:59.839201+00:00 app[web.1]: Require stack:
+2021-03-16T04:34:59.839202+00:00 app[web.1]: - /app/app.js
+2021-03-16T04:34:59.839202+00:00 app[web.1]: at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)
+2021-03-16T04:34:59.839203+00:00 app[web.1]: at Function.Module._load (internal/modules/cjs/loader.js:725:27)
+2021-03-16T04:34:59.839203+00:00 app[web.1]: at Module.require (internal/modules/cjs/loader.js:952:19)
+2021-03-16T04:34:59.839204+00:00 app[web.1]: at require (internal/modules/cjs/helpers.js:88:18)
+2021-03-16T04:34:59.839204+00:00 app[web.1]: at Object.<anonymous> (/app/app.js:6:19)
+2021-03-16T04:34:59.839204+00:00 app[web.1]: at Module._compile (internal/modules/cjs/loader.js:1063:30)
+2021-03-16T04:34:59.839205+00:00 app[web.1]: at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+2021-03-16T04:34:59.839205+00:00 app[web.1]: at Module.load (internal/modules/cjs/loader.js:928:32)
+2021-03-16T04:34:59.839206+00:00 app[web.1]: at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+2021-03-16T04:34:59.839206+00:00 app[web.1]: at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12) {
+2021-03-16T04:34:59.839207+00:00 app[web.1]: code: 'MODULE_NOT_FOUND',
+2021-03-16T04:34:59.839207+00:00 app[web.1]: requireStack: [ '/app/app.js' ]
+2021-03-16T04:34:59.839208+00:00 app[web.1]: }
+2021-03-16T04:34:59.889294+00:00 heroku[web.1]: Process exited with status 1
+2021-03-16T04:34:59.960409+00:00 heroku[web.1]: State changed from starting to crashed
+2021-03-16T04:35:00.846198+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=justification.herokuapp.com request_id=97ac05e6-21f6-44c0-a185-0f008edef807 fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
+2021-03-16T04:35:01.342596+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=justification.herokuapp.com request_id=600a83af-6100-4c26-8c1f-53b5153cda47 fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
+2021-03-16T04:35:11.306134+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/test" host=justification.herokuapp.com request_id=5cc12000-d4ef-4e49-a588-71840d7732fb fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
+2021-03-16T04:35:11.685260+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=justification.herokuapp.com request_id=1fee43e6-758e-4ea6-9f3e-0b98f7e07690 fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
+2021-03-16T04:35:19.845430+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/test" host=justification.herokuapp.com request_id=db806659-56b2-447f-9cbf-06bed48a3886 fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
+2021-03-16T04:35:20.224529+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=justification.herokuapp.com request_id=950aea0c-3656-4340-8668-977a190c61ab fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
