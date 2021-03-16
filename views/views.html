@@ -4,13 +4,13 @@
 <div class="container">
     <div class="row">
     <div class="mb-3" id="signin">
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="name@example.com">
         <button type="button" class="btn btn-primary" onclick="signIn()">Primary</button>
     </div>
         <div class="mb-3" id="text">
-            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="textIn" class="form-label">Example textarea</label>
+            <textarea class="form-control" id="textIn" rows="3"></textarea>
         </div>
     </div>
 </div>
@@ -18,31 +18,36 @@
 </div>
 <script>
     $("#text").hide();
-    function signIn(callback)
-    {
-        //
-        // $.ajax({
-        //     type: "POST",
-        //     data: {email : "hicham@gmail.com"},
-        //     url: 'https://justification.herokuapp.com/api/signIn',
-        //     success: function(resultat){
-        //         console.log(resultat);
-        //     },
-        //     error: function (e) {
-        //         alert(e);
-        //     }
-        // });
-         console.log('dkhlt')
-        $.get( "http://localhost:3000/api/signin" );
-
-        // const xmlHttp = new XMLHttpRequest();
-        // xmlHttp.onreadystatechange = function() {
-        //     if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
-        //         callback(xmlHttp.responseText);
-        //     console.log(xmlHttp.responseText)
-        // }
-        // xmlHttp.open("GET", 'http://localhost:3000/api/signin', true); // true for asynchronous
-        // xmlHttp.send(null);
+    let cookieValue = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('token='));
+    if (typeof cookieValue !== "undefined"){
+        cookieValue = cookieValue.split('=')[1];
+        $("#signin").hide();
+        $("#text").show();
     }
 
+
+    function signIn() {
+        const myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        const raw = JSON.stringify({"email":"tmanyik@gmail.com"});
+
+        const requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        fetch("http://localhost:3001/api/signin", requestOptions)
+            .then(response => response.text())
+            .then(result => {
+                document.cookie = "token="+result;
+                $("#text").show();
+                $("#signin").hide();
+            })
+            .catch(error => console.log('error', error));
+    }
 </script>

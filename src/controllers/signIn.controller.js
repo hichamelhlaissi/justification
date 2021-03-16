@@ -8,6 +8,9 @@ const userValidator = require('../user.modele');
 let users = require('../../public/users')
 
 module.exports.signIn_post=(req,res,next)=>{
+
+    console.log(req.body, 'data')
+
     const {email} = req.body;
     const uid = uuidv4();
     const timestamp = moment().valueOf();

@@ -8,10 +8,18 @@ module.exports.checkText_post = (req,res,next)=>{
     /**
      * voir signIn.controller.js
      * */
-    const token = req.cookies.token;
-    // console.log(req.connection.remoteAddress)
+    /**
+     * on recupere token si il est dans un cookie ou par bearer token sinon status => 401
+     * */
+    let token = req.cookies.token;
     if (!token) {
-        return res.status(401).end()
+        const bearerHeader = req.headers['authorization'];
+        if (typeof bearerHeader !== "undefined"){
+            const bearer = bearerHeader.split(' ');
+            token = bearer[1];
+        }else{
+            return res.status(401).end()
+        }
     }
     let payload
     try {
