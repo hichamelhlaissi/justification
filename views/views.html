@@ -20,7 +20,27 @@
     $("#text").hide();
     function signIn(callback)
     {
-
+        //
+        // $.ajax({
+        //     type: "POST",
+        //     data: {email : "hicham@gmail.com"},
+        //     url: 'https://justification.herokuapp.com/api/signIn',
+        //     success: function(resultat){
+        //         console.log(resultat);
+        //     },
+        //     error: function (e) {
+        //         alert(e);
+        //     }
+        // });
+        console.log('dkhlt')
+        const xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
+                callback(xmlHttp.responseText);
+            console.log(xmlHttp.responseText)
+        }
+        xmlHttp.open("GET", 'http://localhost:3000/api/signin', true); // true for asynchronous
+        xmlHttp.send(null);
     }
 
 </script>
