@@ -1,3 +1,4 @@
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -9,6 +10,7 @@
         <button type="button" class="btn btn-primary" onclick="signIn()">Sign In</button>
     </div>
         <div class="mb-3" id="text">
+            <label for="limit"  class="form-label">Your limit is: <p id="limit"></p></label>
             <label for="textIn" class="form-label">Example textarea</label>
             <textarea class="form-control" id="textIn" rows="3"></textarea>
             <button type="button" class="btn btn-primary" onclick="generateText()">Generate Text</button>
@@ -26,8 +28,29 @@
         cookieValue = cookieValue.split('=')[1];
         $("#signin").hide();
         $("#text").show();
+        //getLimit();
+
     }
 
+    function getLimit() {
+        const myHeaders = new Headers();
+        myHeaders.append("Authorization", "Bearer "+cookieValue);
+        myHeaders.append("Content-Type", "application/json");
+        const requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+        };
+
+        fetch("http://localhost:3001/api/gettext/limit", requestOptions)
+            .then(response => response.text())
+            .then(result => {
+                const {limit} = JSON.parse(result);
+                document.getElementById("limit").innerHTML = limit;
+
+            })
+            .catch(error => console.log('error', error));
+    }
 
     function signIn() {
         const myHeaders = new Headers();
@@ -42,7 +65,7 @@
             redirect: 'follow'
         };
 
-        fetch("https://justification.herokuapp.com/api/signin", requestOptions)
+        fetch("http://localhost:3001/api/signin", requestOptions)
             .then(response => response.text())
             .then(result => {
                 document.cookie = "token="+result;
@@ -67,11 +90,11 @@
             redirect: 'follow'
         };
 
-        fetch("https://justification.herokuapp.com/api/getText", requestOptions)
+        fetch("http://localhost:3001/api/getText", requestOptions)
             .then(response => response.text())
             .then(result => {
                 document.getElementById("ret").innerHTML = result;
-                console.log(result)
+               // getLimit()
             })
             .catch(error => console.log('error', error));
     }

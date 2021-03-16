@@ -54,6 +54,6 @@ module.exports.signIn_post=(req,res,next)=>{
         }
     });
     res.cookie("token", token)
-    res.status(200).send(token);
+    res.status(200).json(token);
     res.end();
 }

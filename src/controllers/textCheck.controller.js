@@ -118,3 +118,42 @@ module.exports.checkText_post = (req,res,next)=>{
     return res.status(200).send(text);
 
 };
+
+module.exports.getLimit_get= (req,res,next)=>{
+    let token = req.cookies.token;
+    if (!token) {
+        const bearerHeader = req.headers['authorization'];
+        if (typeof bearerHeader !== "undefined"){
+            const bearer = bearerHeader.split(' ');
+            token = bearer[1];
+        }else{
+            return res.status(401).end()
+        }
+    }
+    let payload
+    try {
+        payload = jwt.verify(token, jwtKey)
+    } catch (e) {
+        if (e instanceof jwt.JsonWebTokenError) {
+            return res.status(401).end()
+        }
+        return res.status(400).end()
+    }
+
+    const user = payload.ret;
+    let limit="";
+    let timestamp="";
+    users.map(obj => [user].find(o => {
+            if (o.user_id === obj.user_id){
+
+               limit = obj.rate.limit;
+               timestamp = obj.rate.timestamp;
+            }
+        })
+    );
+    const ret={
+        "limit": limit,
+        "timestamp": timestamp
+    }
+    return  res.status(200).send(ret)
+}
