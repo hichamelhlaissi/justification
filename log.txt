@@ -95,3 +95,73 @@
 2021-03-16T04:40:45.298249+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=justification.herokuapp.com request_id=978019d2-892e-4302-b84c-058161c47511 fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
 2021-03-16T04:40:52.300392+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/test" host=justification.herokuapp.com request_id=e54b77fc-9146-48af-b4e2-cbdf18f17d88 fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
 2021-03-16T04:40:52.621800+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=justification.herokuapp.com request_id=6095c8e2-594c-46bb-ade3-e3f3231dff9b fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
+2021-03-16T04:45:30.000000+00:00 app[api]: Build started by user elhlaissihicham@gmail.com
+2021-03-16T04:45:50.064179+00:00 heroku[web.1]: State changed from crashed to starting
+2021-03-16T04:45:49.707782+00:00 app[api]: Release v5 created by user elhlaissihicham@gmail.com
+2021-03-16T04:45:49.707782+00:00 app[api]: Deploy 35c00d7b by user elhlaissihicham@gmail.com
+2021-03-16T04:45:50.000000+00:00 app[api]: Build succeeded
+2021-03-16T04:45:54.114060+00:00 heroku[web.1]: Starting process with command `node ./bin/www`
+2021-03-16T04:45:57.583504+00:00 heroku[web.1]: Process exited with status 1
+2021-03-16T04:45:57.657719+00:00 heroku[web.1]: State changed from starting to crashed
+2021-03-16T04:45:57.694310+00:00 heroku[web.1]: State changed from crashed to starting
+2021-03-16T04:45:57.517380+00:00 app[web.1]: internal/modules/cjs/loader.js:883
+2021-03-16T04:45:57.517411+00:00 app[web.1]: throw err;
+2021-03-16T04:45:57.517412+00:00 app[web.1]: ^
+2021-03-16T04:45:57.517412+00:00 app[web.1]: 
+2021-03-16T04:45:57.517412+00:00 app[web.1]: Error: Cannot find module 'uuid'
+2021-03-16T04:45:57.517413+00:00 app[web.1]: Require stack:
+2021-03-16T04:45:57.517413+00:00 app[web.1]: - /app/src/controllers/signIn.controller.js
+2021-03-16T04:45:57.517413+00:00 app[web.1]: - /app/routes/signIn.js
+2021-03-16T04:45:57.517414+00:00 app[web.1]: - /app/app.js
+2021-03-16T04:45:57.517414+00:00 app[web.1]: - /app/bin/www
+2021-03-16T04:45:57.517414+00:00 app[web.1]: at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)
+2021-03-16T04:45:57.517415+00:00 app[web.1]: at Function.Module._load (internal/modules/cjs/loader.js:725:27)
+2021-03-16T04:45:57.517415+00:00 app[web.1]: at Module.require (internal/modules/cjs/loader.js:952:19)
+2021-03-16T04:45:57.517416+00:00 app[web.1]: at require (internal/modules/cjs/helpers.js:88:18)
+2021-03-16T04:45:57.517416+00:00 app[web.1]: at Object.<anonymous> (/app/src/controllers/signIn.controller.js:2:24)
+2021-03-16T04:45:57.517416+00:00 app[web.1]: at Module._compile (internal/modules/cjs/loader.js:1063:30)
+2021-03-16T04:45:57.517417+00:00 app[web.1]: at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+2021-03-16T04:45:57.517417+00:00 app[web.1]: at Module.load (internal/modules/cjs/loader.js:928:32)
+2021-03-16T04:45:57.517417+00:00 app[web.1]: at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+2021-03-16T04:45:57.517418+00:00 app[web.1]: at Module.require (internal/modules/cjs/loader.js:952:19) {
+2021-03-16T04:45:57.517418+00:00 app[web.1]: code: 'MODULE_NOT_FOUND',
+2021-03-16T04:45:57.517418+00:00 app[web.1]: requireStack: [
+2021-03-16T04:45:57.517419+00:00 app[web.1]: '/app/src/controllers/signIn.controller.js',
+2021-03-16T04:45:57.517419+00:00 app[web.1]: '/app/routes/signIn.js',
+2021-03-16T04:45:57.517419+00:00 app[web.1]: '/app/app.js',
+2021-03-16T04:45:57.517419+00:00 app[web.1]: '/app/bin/www'
+2021-03-16T04:45:57.517419+00:00 app[web.1]: ]
+2021-03-16T04:45:57.517420+00:00 app[web.1]: }
+2021-03-16T04:45:57.975614+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=justification.herokuapp.com request_id=faf761dd-0bc4-495a-9272-c8c80133bfb2 fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
+2021-03-16T04:46:02.870113+00:00 heroku[web.1]: Starting process with command `node ./bin/www`
+2021-03-16T04:46:06.407293+00:00 heroku[web.1]: Process exited with status 1
+2021-03-16T04:46:06.504592+00:00 heroku[web.1]: State changed from starting to crashed
+2021-03-16T04:46:06.318377+00:00 app[web.1]: internal/modules/cjs/loader.js:883
+2021-03-16T04:46:06.318399+00:00 app[web.1]: throw err;
+2021-03-16T04:46:06.318400+00:00 app[web.1]: ^
+2021-03-16T04:46:06.318400+00:00 app[web.1]: 
+2021-03-16T04:46:06.318400+00:00 app[web.1]: Error: Cannot find module 'uuid'
+2021-03-16T04:46:06.318401+00:00 app[web.1]: Require stack:
+2021-03-16T04:46:06.318401+00:00 app[web.1]: - /app/src/controllers/signIn.controller.js
+2021-03-16T04:46:06.318401+00:00 app[web.1]: - /app/routes/signIn.js
+2021-03-16T04:46:06.318402+00:00 app[web.1]: - /app/app.js
+2021-03-16T04:46:06.318402+00:00 app[web.1]: - /app/bin/www
+2021-03-16T04:46:06.318419+00:00 app[web.1]: at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)
+2021-03-16T04:46:06.318419+00:00 app[web.1]: at Function.Module._load (internal/modules/cjs/loader.js:725:27)
+2021-03-16T04:46:06.318420+00:00 app[web.1]: at Module.require (internal/modules/cjs/loader.js:952:19)
+2021-03-16T04:46:06.318420+00:00 app[web.1]: at require (internal/modules/cjs/helpers.js:88:18)
+2021-03-16T04:46:06.318420+00:00 app[web.1]: at Object.<anonymous> (/app/src/controllers/signIn.controller.js:2:24)
+2021-03-16T04:46:06.318421+00:00 app[web.1]: at Module._compile (internal/modules/cjs/loader.js:1063:30)
+2021-03-16T04:46:06.318421+00:00 app[web.1]: at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+2021-03-16T04:46:06.318421+00:00 app[web.1]: at Module.load (internal/modules/cjs/loader.js:928:32)
+2021-03-16T04:46:06.318422+00:00 app[web.1]: at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+2021-03-16T04:46:06.318422+00:00 app[web.1]: at Module.require (internal/modules/cjs/loader.js:952:19) {
+2021-03-16T04:46:06.318422+00:00 app[web.1]: code: 'MODULE_NOT_FOUND',
+2021-03-16T04:46:06.318423+00:00 app[web.1]: requireStack: [
+2021-03-16T04:46:06.318423+00:00 app[web.1]: '/app/src/controllers/signIn.controller.js',
+2021-03-16T04:46:06.318423+00:00 app[web.1]: '/app/routes/signIn.js',
+2021-03-16T04:46:06.318424+00:00 app[web.1]: '/app/app.js',
+2021-03-16T04:46:06.318424+00:00 app[web.1]: '/app/bin/www'
+2021-03-16T04:46:06.318424+00:00 app[web.1]: ]
+2021-03-16T04:46:06.318425+00:00 app[web.1]: }
+2021-03-16T04:46:07.387251+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=justification.herokuapp.com request_id=89a29f66-12e4-4d28-8434-c05d26e86cae fwd="176.129.116.94" dyno= connect= service= status=503 bytes= protocol=https
